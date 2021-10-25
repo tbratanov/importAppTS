@@ -11,4 +11,4 @@ export async function clearMemory() {
     .catch((error) => {
         console.warn(error);
     })
-};
+}

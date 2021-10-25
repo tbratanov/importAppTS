@@ -4,7 +4,7 @@ import {initializeGlue} from "./initalizeGlue"
 export async function removeLayouts(location:string) {
 
     const glue = await initializeGlue();
-    let layoutsToRemove = await fetchFromJSON(location);
+    const layoutsToRemove = await fetchFromJSON(location);
 
     if (Array.isArray(layoutsToRemove)) {
         layoutsToRemove.forEach((layout) => {
@@ -24,8 +24,8 @@ export async function removeLayouts(location:string) {
         .catch((err) => {
             console.warn(err)
         });
-    };
+    }
 
     window.alert("Layouts removed!");
     
-};
+}

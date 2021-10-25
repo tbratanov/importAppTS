@@ -10,4 +10,4 @@ export function getMode() {
         mode = undefined;
     }
     return mode;
-};
+}

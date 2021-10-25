@@ -5,7 +5,7 @@ import {fetchFromJSON} from "./fetchFromJSON"
 
 export async function removeAppGroup(location:string) {
     
-    let appGroup = await fetchFromJSON(location);
+    const appGroup = await fetchFromJSON(location);
 
     if (Array.isArray(appGroup)) {
         appGroup.forEach((appToRemove) => {
@@ -13,8 +13,8 @@ export async function removeAppGroup(location:string) {
         })
     } else {
         removeApp(appGroup.name)
-    };
-};
+    }
+}
 
 async function removeApp(appName:string) {
     const glue = await initializeGlue();
@@ -29,6 +29,6 @@ async function removeApp(appName:string) {
         .catch((err) => {
             console.warn(err)
         });
-    };
-};
+    }
+}
 

@@ -13,7 +13,7 @@ export async function importLayouts(type:string, location:string) {
         window.alert("No such layout type found!")
     } else if (mode === undefined) {
         window.alert("Mode is not selected, the method will default to mode: Replace!")
-    };
+    }
 
     let toImport:any;
 
@@ -21,9 +21,9 @@ export async function importLayouts(type:string, location:string) {
         toImport = layouts;
     } else {
         toImport = [layouts];
-    };
+    }
 
-    glue.layouts.import(layouts, (mode as any))
+    glue.layouts.import(toImport, (mode as any))
     .then(() => {
         window.alert("Import Successful");
     })
@@ -31,4 +31,4 @@ export async function importLayouts(type:string, location:string) {
         console.warn(err);
     });
     
-};
+}

@@ -4,7 +4,7 @@ export async function fetchFromJSON(location:string) {
 
     if (!response.ok) {
         throw new Error("error reading file" + response.status);
-    };
+    }
 
     return response.json();
-};
+}

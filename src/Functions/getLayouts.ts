@@ -10,10 +10,10 @@ export async function getLayouts(type:string, location:string) {
         layouts = layoutsConfig.filter(filter => filter.type === type)
     } else {
         if (layoutsConfig.type === type) {
-            layouts = layouts;
+            layouts = layoutsConfig;
         }
-    };
+    }
 
     return layouts;
 
-};
+}

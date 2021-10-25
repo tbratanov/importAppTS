@@ -8,11 +8,11 @@ import {checkVersion} from "./Functions/checkVersion"
 
 getCustomAlert();
 
-const layoutsJSONLocation = './definitions/layouts/layouts.json';
-const appGroup1JSONLocation = './definitions/apps/firstAppGroup.json';
-const appGroup2JSONLocation = './definitions/apps/secondAppGroup.json';
+const layoutsJSONLocation = './configurations/Layouts/layouts.json';
+const appGroup1JSONLocation = './configurations/Applications/firstAppGroup.json';
+const appGroup2JSONLocation = './configurations/Applications/secondAppGroup.json';
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     handleDOMReady();
 });
 
@@ -45,44 +45,44 @@ function handleDOMReady() {
 
     const removeLayouts = document.getElementById("removeLayouts");
     removeLayouts.addEventListener("click", removeLayoutsFunc);
-};
+}
 
 function importApp1Func() {
     importAppGroup(appGroup1JSONLocation);
-};
+}
 
 function importApp2Func() {
     importAppGroup(appGroup2JSONLocation);
-};
+}
 
 function removeAPP1Func() {
     removeAppGroup(appGroup1JSONLocation);
-};
+}
 
 function removeApp2Func() {
     removeAppGroup(appGroup2JSONLocation);
-};
+}
 
 function clearMemmoryFunc() {
     clearMemory();
-};
+}
 
 function importWorkspaceFunc() {
     const type = 'Workspace';
     importLayouts(type, layoutsJSONLocation)
-};
+}
 
 function importSwimlaneFunc() {
     const type = 'Swimlane';
     importLayouts(type, layoutsJSONLocation)
-};
+}
 
 function importGlobaLayout() {
     const type = 'Global';
     importLayouts(type, layoutsJSONLocation)
-};
+}
 
 function removeLayoutsFunc() {
     removeLayouts(layoutsJSONLocation);
-};
+}
 

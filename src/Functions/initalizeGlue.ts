@@ -6,4 +6,4 @@ export async function initializeGlue() {
     } catch(error) {
         console.warn(error);
     }
-};
+}
