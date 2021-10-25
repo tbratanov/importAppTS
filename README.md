@@ -18,4 +18,4 @@ The script must be executed to host the http-server:
 npm run start   // run the server
 ```
 # Layouts or Application definitions
-The application can utilize other layout or application definitions, to do so place them in either appGroup or layouts .json config files in the definitions folder. 
+The application can utilize other layout or application definitions, to do so place them in either appGroup or layouts .json config files in the respective folders. 
