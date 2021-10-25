@@ -17972,7 +17972,6 @@
       const mode = getMode();
       const glue = await initializeGlue();
       const layouts = await getLayouts(type, location);
-      console.log(glue.config);
       if (layouts === undefined) {
           window.alert("No such layout type found!");
       }
